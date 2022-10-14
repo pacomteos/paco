@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22000}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang10 <!DOCTYPE html>\par
+<html>\par
+    <head>\par
+        <meta charset="UTF-8">\par
+        <title></title>\par
+    </head>\par
+    <body>\par
+        <?php\par
+            include "multiplo2.php";           \par
+ \par
+            if (!isset($_POST['n1'])) \{\par
+                \par
+        ?>\par
+        Introduzca un n\'famero para saber si es primo o no.<br>\par
+        <form action='#' method="post">\par
+            <input type="number" name="n1" min="0" autofocus><br>\par
+            <input type="number" name="n2" min="0" autofocus><br>\par
+            <input type="submit" value="Aceptar">\par
+        </form>\par
+        <?php\par
+            \} else \{\par
+                $base=$_POST['n1'];\par
+                $exponente=$_POST['n2'];\par
+                $resultado=potencia($base, $exponente);\par
+                echo "La potencia $exponente de $base es $resultado";\par
+            \}\par
+        ?>\par
+    </body>\par
+    </html>\par
+}
